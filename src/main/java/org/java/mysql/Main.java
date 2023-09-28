@@ -16,8 +16,9 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Inserisci filtro per cercare tra le nazioni: ");
-		System.out.println();
 		String filter = "%"+sc.nextLine()+"%";
+		System.out.println("Filtro utilizzato: "+ "\u001B[32m" +filter.replace('%', ' ') + "\u001B[0m");
+
 		sc.close();
 		
 		try (Connection con = DriverManager.getConnection(url, user, password)) {
