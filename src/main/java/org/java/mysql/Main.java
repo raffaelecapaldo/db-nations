@@ -63,8 +63,9 @@ public class Main {
 				}
 				
 				PreparedStatement ps2 = con.prepareStatement(queryStats);		
-				System.out.println("Inserisci l'ID di una nazione: ");
+				System.out.print("Inserisci l'ID di una nazione: ");
 				int countryID = Integer.valueOf(sc.nextLine());
+				sc.close();
 				ps2.setInt(1, countryID);
 				ResultSet rs2 = ps2.executeQuery();
 
